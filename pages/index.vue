@@ -23,6 +23,7 @@ useHead({
         { hid: 'twitter:title', name: 'twitter:title', content: 'Эксперт Wildberries - Курс по работе на маркетплейсе' },
         { hid: 'twitter:description', name: 'twitter:description', content: 'Изучите, как стать экспертом по работе на Wildberries с нашим курсом.' },
         { hid: 'twitter:image', name: 'twitter:image', content: 'ссылка на изображение для представления курса' },
+        { name: 'google-site-verification', content: 'NRIlfcShU6_3QQbq3kmbR_f0E2IvNhPdGBY28FEg9lI' },
     ],
     script: [
         {
