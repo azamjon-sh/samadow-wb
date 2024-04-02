@@ -2,11 +2,11 @@
     <section class="course py-[72px] xl:pt-[40px] bg-gray" id="plan">
         <div class="content">
             <h2 class="text-[52px] xl:text-4xl font-bold mb-10">Выберите свой карьерный путь</h2>
-            <div class="course__grid grid grid-cols-3 xl:grid-cols-2 md:grid-cols-1 gap-6">
-                <div class="course__item bg-white px-6 py-8 rounded-[20px] flex flex-col justify-between relative w-full md:max-w-[450px] mx-auto"
+            <div class="course__grid grid grid-cols-2 xl:grid-cols-2 md:grid-cols-1 gap-6 justify-around">
+                <div class="course__item bg-white px-6 py-8 rounded-[20px] flex flex-col justify-between relative w-full max-w-[450px] mx-auto"
                      v-for="item in courses" :key="item.id">
 
-                    <div v-if="item.popular" class="course__popular bg-black flex items-center justify-center gap-2 absolute top-0 left-0 py-3 rounded-t-[20px] w-full">
+                    <div v-if="item.popular" class="course__popular bg-bla  ck flex items-center justify-center gap-2 absolute top-0 left-0 py-3 rounded-t-[20px] w-full">
                         <svg width="20" height="20" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                              viewBox="0 0 426.667 426.667" xml:space="preserve">
                             <polygon style="fill:#fff;"
@@ -35,7 +35,7 @@
                         <div class="flex items-start">
                             <span class="new text-3xl font-[600]">{{ item.priceNew }} </span>
                             <span class="new text-sm line-through mt-0.5 mr-2"> ₽/мес.</span>
-                            <span class="old  text-[#a3a3a3] text-sm line-through mt-0.5">{{
+                            <span class="old  text-[#a3a3a3] text-sm line-through mt-0.5" v-if="item.priceOld">{{
                                 item.priceOld
                                 }} ₽/мес</span>
                         </div>
@@ -54,29 +54,17 @@
 <script setup>
 
 const courses = [
-    {
-        id: 1,
-        title: 'Новичок',
-        advantages: [
-            '3 месяца (1 месяц при ускоренном темпе)',
-            '7 практических работ с обратной связью',
-            '1 проект в портфолио'
-        ],
-        priceOld: 4849,
-        popular: false,
-        priceNew: 2849,
-    }, {
+     {
         id: 2,
-        title: 'Универсал',
+        title: 'Базовый курс',
         advantages: [
             '3 месяца (1 месяц при ускоренном темпе)',
             '7 практических работ с обратной связью',
             '1 проект в портфолио',
             '5 личных встреч с экспертом в Казани или в Москве'
         ],
-        priceOld: 4849,
-        priceNew: 2849,
-        popular: true,
+        priceNew: 69000,
+        popular: false,
     }, {
         id: 3,
         title: 'Эксперт',
@@ -86,9 +74,9 @@ const courses = [
             '1 проект в портфолио',
             '9 личных встреч с экспертом в Казани или в Москве'
         ],
-        priceOld: 4849,
-        popular: false,
-        priceNew: 2849,
+        priceOld: 119000,
+        popular: true,
+        priceNew: 99000,
     },
 ]
 </script>
