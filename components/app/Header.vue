@@ -1,8 +1,8 @@
 <template>
   <div class="sticky bg-[#FFF705] left-0 top-0 w-full z-10 h-16 shadow">
-    <div class="content h-full flex items-center justify-between">
-        <span class="font-semibold text-md">
-Получите персональную скидку до <span class="text-xl font-bold">-50%</span>
+    <div class="content h-full flex items-center justify-between gap-1">
+        <span class="font-semibold text-md md:text-sm">
+Получите персональную скидку до <span class="text-xl font-bold">-50%</span>
         </span>
       <a href="https://t.me/alexshado" target="_blank" class="flex gap-2 bg-purple text-white hover:bg-black text-md border-0 rounded-xl px-6 py-2">
         <span>Написать</span>
