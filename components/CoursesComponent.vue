@@ -6,7 +6,7 @@
                 <div class="course__item bg-white px-6 py-8 rounded-[20px] flex flex-col justify-between relative w-full max-w-[450px] mx-auto"
                      v-for="item in courses" :key="item.id">
 
-                    <div v-if="item.popular" class="course__popular bg-bla  ck flex items-center justify-center gap-2 absolute top-0 left-0 py-3 rounded-t-[20px] w-full">
+                    <div v-if="item.popular" class="course__popular bg-black flex items-center justify-center gap-2 absolute top-0 left-0 py-3 rounded-t-[20px] w-full">
                         <svg width="20" height="20" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                              viewBox="0 0 426.667 426.667" xml:space="preserve">
                             <polygon style="fill:#fff;"
@@ -33,8 +33,8 @@
                     </div>
                     <div class="course__price grow basis-0 flex items-end mt-10">
                         <div class="flex items-start">
-                            <span class="new text-3xl font-[600]">{{ item.priceNew }} </span>
-                            <span class="new text-sm line-through mt-0.5 mr-2"> ₽/мес.</span>
+                            <span class="new text-3xl font-[600]">от {{ item.priceNew }} <span class="new text-sm line-through mt-0.5 mr-2">₽/мес.</span></span>
+
                             <span class="old  text-[#a3a3a3] text-sm line-through mt-0.5" v-if="item.priceOld">{{
                                 item.priceOld
                                 }} ₽/мес</span>
