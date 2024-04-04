@@ -34,7 +34,7 @@
       </div>
     </div>
     <div v-show="burger"
-         class="header__mobile fixed right-0 top-0 h-screen overflow-y-auto w-full max-w-[350px] bg-white p-5 z-1 shadow-2xl flex flex-col gap-4"
+         class="header__mobile fixed right-0 top-0 h-screen overflow-y-auto w-full max-w-[350px] bg-white p-5 z-20 shadow-2xl flex flex-col gap-4"
          @click="burger = false">
       <div class="w-10 h-10 rounded-full p-2 bg-gray">
         <img src="~assets/images/close.svg" alt="" class="w-full">
