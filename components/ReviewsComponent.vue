@@ -1,37 +1,54 @@
 <template>
-    <section class="plan py-[72px] xl:pt-[40px]" id="reviews">
-        <div class="content">
-            <h2 class="text-[52px] xl:text-3xl font-bold">Отзывы участников ★&nbsp;4,7</h2>
-            <el-carousel :interval="4000" height="200px" class="max-w-[720px] mx-auto mt-5">
-                <el-carousel-item v-for="item in 6" :key="item" class="rounded-[20px] p-5 bg-gray">
-                    <div class="flex items-center gap-4">
-                        <el-avatar :size="50"/>
-                        <div>
-                            <h3 class="h-auto text-lg leading-normal font-bold">{{ slides.name }}</h3>
-                            <span class="text-md font-[600]">{{ slides.date }}</span>
-                        </div>
-                    </div>
-                    <p class="my-4 text-sm">“ {{ slides.text }} “</p>
-                </el-carousel-item>
-            </el-carousel>
-        </div>
+  <section class="plan py-[72px] xl:pt-[40px]" id="reviews">
+    <div class="content">
+      <h2 class="text-[52px] xl:text-3xl font-bold">Отзывы участников ★&nbsp;4,7</h2>
+      <el-carousel :interval="4000" class="max-w-[720px] mx-auto mt-5 min-h-[250px] md:min-h-[300px]">
+        <el-carousel-item v-for="item in slides" :key="item.id" class="rounded-[20px] p-5 bg-gray md:max-w-none max-w-[620px] md:mx-0 mx-[50px]">
+          <div class="flex items-center gap-4">
+            <el-avatar :size="50">{{item.name[0]}}</el-avatar>
+            <div>
+              <h3 class="h-auto text-lg leading-normal font-bold">{{ item.name }}</h3>
+              <span class="text-md font-[600]">{{ item.date }}</span>
+            </div>
+          </div>
+          <p class="my-4 text-sm">“ {{ item.text }} “</p>
+        </el-carousel-item>
+      </el-carousel>
+    </div>
 
-    </section>
+  </section>
 </template>
 
 <script>
 export default {
-    name: "ReviewsComponent",
-    data() {
-        return {
-            slides: {
-                id: 1,
-                name: "Наргиз Асадова",
-                date: "01.01.2001",
-                text: "Понравилась подача спикеров, материал в доступном виде, подробные объяснения, как составить хорошее резюме, внимательная проверка практической работы."
-            }
-        }
+  name: "ReviewsComponent",
+  data() {
+    return {
+      slides: [{
+        id: 1,
+        name: "Шахноза",
+        date: "13.09.2023",
+        text: "Очень благодарна Алишеру за обучение! Каждый этап курса он ввел за ручку, все подробно объяснял простым языком, даже самые казалось бы сложные вещи я понимала. Очень легко освоила информацию и уже через неделю начала работать. Спасибо вам большое!"
+      }, {
+        id: 2,
+        name: "Диана",
+        date: "16.10.2023",
+        text: "Курс  прошел быстро, вся информация отражена доступно и понятно. Самый главный фактор, то что, Алишер подходил индивидуально к любым моим вопросам, в трудности ни разу не оставил. Достойный учитель!"
+      }, {
+        id: 3,
+        name: "Мария",
+        date: "01.07.2023",
+        text: "До знакомства с Алишером, я , наверное как и многие, думала, что ВБ это не мое, что там надо много учиться, и, что я не смогу. НО, он так все кратно и ясно объясняет все, что после его уроков хочется все быстро применять на практике. Огромным плюсом было то, что период обучения теории и практики проходили одновременно."
+      }, {
+        id: 4,
+        name: "Кристина",
+        date: "3.02.2024",
+        text: "Хочу выразить благодарность преподавателю за его высокий профессионализм, терпение и внимательное отношение к своим обучающимся. Свои навыки по сайту вб он доносит интересно, понятно и легкодоступно. Добрый и добродушный человек. Благодаря его подходу к обучению, я смогла значительно улучшить свои знания и навыки, уже с легкостью могу работать в вб.\n" +
+            "Хочу посоветовать, если кто-то ищет преподавателя, то рекомендую данного человека.\n" +
+            "Благодарна всем сердцем, что есть такие люди!"
+      }]
     }
+  }
 }
 </script>
 
